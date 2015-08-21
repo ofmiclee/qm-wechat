@@ -89,7 +89,7 @@ function($scope, $http, KeyNames, $mdDialog){
         });
     };
     $scope.auth = function() {
-        $http.get(KeyNames.domain + '/auth/req')
+        $http.get(KeyNames.domain + '/oauth/req')
         .then(function(authLink){
             window.open(authLink);
             // window.open('http://wechat.qianmi.com/oauth/req');
