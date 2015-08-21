@@ -1,0 +1,17 @@
+{ method: 'POST',
+  url: '/event?signature=7b0f3ee8f5481387022ce9d900718b82ec203ac7
+       &timestamp=1436932228
+       &nonce=508762694
+       &encrypt_type=aes
+       &msg_signature=c7afafa450c3788740eda766663bf34f5fe5e3fb',
+  header:
+   { host: 'wechat.qianmi.com',
+     'x-forwarded-for': '140.207.54.77',
+     'x-real-ip': '140.207.54.77',
+     'remote-host': '140.207.54.77',
+     connection: 'close',
+     'user-agent': 'Mozilla/4.0',
+     accept: '*/*',
+     pragma: 'no-cache',
+     'content-length': '571',
+     'content-type': 'text/xml' } }
