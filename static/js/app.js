@@ -61,7 +61,7 @@ function($scope, $http, KeyNames, $mdDialog){
     var DialogController = function($scope, $http, $mdDialog) {
         $http.get(KeyNames.domain + '/oauth/req')
         .then(function(authLink){
-            $scope.authLink = authLink;
+            $scope.authLink = authLink.url;
             // window.open('http://wechat.qianmi.com/oauth/req');
         });
         $scope.hide = function() {
