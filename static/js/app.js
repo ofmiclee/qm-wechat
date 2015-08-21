@@ -59,7 +59,7 @@ function($httpProvider, $stateProvider, $urlRouterProvider, KeyNames) {
 function($scope, $http, KeyNames, $mdDialog){
     // $http.get('www.baidu.com');
     var DialogController = function($scope, $http, $mdDialog) {
-        $http.get(KeyNames.domain + '/auth/req')
+        $http.get(KeyNames.domain + '/oauth/req')
         .then(function(authLink){
             $scope.authLink = authLink;
             // window.open('http://wechat.qianmi.com/oauth/req');
@@ -86,13 +86,6 @@ function($scope, $http, KeyNames, $mdDialog){
           $scope.status = 'You said the information was "' + answer + '".';
         }, function() {
           $scope.status = 'You cancelled the dialog.';
-        });
-    };
-    $scope.auth = function() {
-        $http.get(KeyNames.domain + '/oauth/req')
-        .then(function(authLink){
-            window.open(authLink);
-            // window.open('http://wechat.qianmi.com/oauth/req');
         });
     };
 }])
