@@ -1,5 +1,5 @@
 // main loading
-angular.module('app', ['ui.router'])
+angular.module('app', ['ui.router', 'ngMaterial'])
 .constant('KeyNames',{'domain': 'http://wechat.qianmi.com'})
 .config(['$httpProvider', '$stateProvider', '$urlRouterProvider', 'KeyNames',
 function($httpProvider, $stateProvider, $urlRouterProvider, KeyNames) {
@@ -55,10 +55,39 @@ function($httpProvider, $stateProvider, $urlRouterProvider, KeyNames) {
   //     }
   // });
 }])
-.controller('IndexCtrl',['$scope', '$http', 'KeyNames',
-function($scope, $http, KeyNames){
+.controller('IndexCtrl',['$scope', '$http', 'KeyNames', '$mdDialog',
+function($scope, $http, KeyNames, $mdDialog){
     // $http.get('www.baidu.com');
-    console.log('asdasd');
+    var DialogController = function($scope, $http, $mdDialog) {
+        $http.get(KeyNames.domain + '/auth/req')
+        .then(function(authLink){
+            $scope.authLink = authLink;
+            // window.open('http://wechat.qianmi.com/oauth/req');
+        });
+        $scope.hide = function() {
+            $mdDialog.hide();
+        };
+        $scope.cancel = function() {
+            $mdDialog.cancel();
+        };
+        $scope.answer = function(answer) {
+            $mdDialog.hide(answer);
+        };
+    };
+    $scope.showAuthDialog = function(ev) {
+        $mdDialog.show({
+          controller: DialogController,
+          templateUrl: 'template/auth.pop.html',
+          parent: angular.element(document.body),
+          targetEvent: ev,
+          clickOutsideToClose:true
+        })
+        .then(function(answer) {
+          $scope.status = 'You said the information was "' + answer + '".';
+        }, function() {
+          $scope.status = 'You cancelled the dialog.';
+        });
+    };
     $scope.auth = function() {
         $http.get(KeyNames.domain + '/auth/req')
         .then(function(authLink){
