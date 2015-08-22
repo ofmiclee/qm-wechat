@@ -47,10 +47,10 @@ body {
     color: #fff;
     font-size: 20px;
     text-decoration: none;
-    -webkit-transition: all 0.3s linear;
-    -moz-transition: all 0.3s linear;
-    -ms-transition: all 0.3s linear;
-    transition: all 0.3s linear;
+    -webkit-transition: background 0.3s linear;
+    -moz-transition: background 0.3s linear;
+    -ms-transition: background 0.3s linear;
+    transition: background 0.3s linear;
 }
 .btn:hover{
 	background: #fff;
@@ -102,9 +102,42 @@ body {
 		font-size: 21px;
 	}
 }
+/*弹窗*/
+.tips{
+	width: 500px;
+}
+.tip-header{
+	padding: 10px 10px 10px 20px;
+	background: #f4f7f9;
+}
+.tip-header .close{
+	float: right;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background: url(../images/close.png) no-repeat;
+}
+.tip-body{
+	padding: 15px 20px;
+	background: #fff;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+.tip-body a{
+	color: #2F74EF;
+	text-decoration: none;
+}
+.tip-footer{
+	padding: 10px;
+    background-color: #f4f7f9;
+    text-align: center;
+}
+.tip-footer button{
+
+}
 .fadeOutUp{
-	-webkit-animation: fadeOutUp 2s 2s ease-out both;
-	-moz-animation: fadeOutUp 2s 2s ease-out both;
+	-webkit-animation: fadeOutUp 1.5s 0.5s ease-out both;
+	-moz-animation: fadeOutUp 1.5s 0.5s ease-out both;
 }
 @-webikt-keyframes fadeOutUp{
 	0%{
@@ -112,8 +145,8 @@ body {
 		-webkit-transform: translateY(0);
 	}
 	100%{
-		opacity: 0.5;
-		-webkit-transform: translateY(-50px);
+		opacity: 0;
+		-webkit-transform: translateY(-150px);
 	}
 }
 @-moz-keyframes fadeOutUp{
@@ -122,8 +155,8 @@ body {
 		-webkit-transform: translateY(0);
 	}
 	100%{
-		opacity: 0.5;
-		-webkit-transform: translateY(-50px);
+		opacity: 0;
+		-webkit-transform: translateY(-150px);
 	}
 }
 @keyframes fadeOutUp{
@@ -132,13 +165,13 @@ body {
 		-webkit-transform: translateY(0);
 	}
 	100%{
-		opacity: 0.5;
-		-webkit-transform: translateY(-50px);
+		opacity: 0;
+		-webkit-transform: translateY(-150px);
 	}
 }
 .fadeInUp{
-	-webkit-animation:fadeInUp 1.5s 2.5s ease-in both;
-	-moz-animation:fadeInUp 1.5s 2.5s ease-in both;
+	-webkit-animation:fadeInUp 1s 1s ease-in both;
+	-moz-animation:fadeInUp 1s 1s ease-in both;
 }
 @-webikt-keyframes fadeInUp{
 	0%{
