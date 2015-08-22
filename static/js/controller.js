@@ -86,6 +86,7 @@ function($scope, $rootScope, $http, KeyNames, $state, $stateParams){
     if($rootScope.baseInfo) {
 
     } else {
+        var appid = $state.params.appid;
         $http.get(KeyNames.domain + '/srv/account/info/' + appid)
         .then(function(baseInfo){
             $rootScope.baseInfo = baseInfo.data;
