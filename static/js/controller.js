@@ -74,9 +74,10 @@ function($scope, $rootScope, $http, KeyNames, $state, $stateParams){
     getBaseInfo();
 }])
 // 基础信息
-.controller('BaseInfoCtrl', ['$scope', '$http', 'KeyNames', '$state',
+.controller('BaseInfoCtrl', ['$scope', '$rootScope', '$http', 'KeyNames', '$state',
 '$stateParams',
-function($scope, $http, KeyNames, $state, $stateParams){
-    // $http.get('www.baidu.com');
+function($scope, $rootScope, $http, KeyNames, $state, $stateParams){
+    //
+    var authGroup = $rootScope.baseInfo.authorization_info.func_info;
 
 }]);

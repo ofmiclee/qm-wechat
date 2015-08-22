@@ -325,3 +325,17 @@ body {
 		margin-top: 5px;
 		}
 }
+.succ-con{
+	margin: 0 auto;
+	padding-top: 92px;
+    padding-left: 50px;
+}
+.succ-con h1{
+	font-size: 22px;
+    color: #363636;
+    border-bottom: 1px solid #ddd;
+}
+.succ-con p{
+	font-size: 16px;
+    color: #666;
+}

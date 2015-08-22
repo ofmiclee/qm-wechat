@@ -1,0 +1,8 @@
+<div class="succ-con">
+    <h1>授权成功</h1>
+    <p>公众微信号:{{baseInfo.authorizer_info.alias}}</p>
+    <p>微信账号类型:<span ng-if="baseInfo.authorizer_info.service_type_info.id == 1">订阅号</span>
+        <span ng-if="baseInfo.authorizer_info.service_type_info.id != 1">服务号</span></p>
+    <p>微信认证状态:<span ng-if="baseInfo.authorizer_info.verify_type_info.id == -1">未认证</span>
+        <span ng-if="baseInfo.authorizer_info.verify_type_info.id != -1">未认证</span></p>
+<div>
