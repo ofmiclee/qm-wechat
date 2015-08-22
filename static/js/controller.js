@@ -71,6 +71,7 @@ function($scope, $rootScope, $http, KeyNames, $state, $stateParams){
             $rootScope.baseInfo = baseInfo;
         });
     };
+    getBaseInfo();
 }])
 // 基础信息
 .controller('BaseInfoCtrl', ['$scope', '$http', 'KeyNames', '$state',
