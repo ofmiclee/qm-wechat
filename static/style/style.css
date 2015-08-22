@@ -170,8 +170,8 @@ body {
 	}
 }
 .fadeInUp{
-	-webkit-animation:fadeInUp 1s 1s ease-in both;
-	-moz-animation:fadeInUp 1s 1s ease-in both;
+	-webkit-animation:fadeInUp 1s 0.5s ease-in both;
+	-moz-animation:fadeInUp 1s 0.5s ease-in both;
 }
 @-webikt-keyframes fadeInUp{
 	0%{
