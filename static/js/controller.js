@@ -19,6 +19,10 @@ function($scope, $http, KeyNames, $mdDialog){
             $mdDialog.hide(answer);
         };
     };
+    $scope.fade = false;
+    $scope.show = function() {
+        $scope.fade = true;
+    };
     $scope.showAuthDialog = function(ev) {
         $mdDialog.show({
           controller: DialogController,
