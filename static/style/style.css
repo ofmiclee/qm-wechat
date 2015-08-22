@@ -93,11 +93,11 @@ body {
 		padding-top: 15%;
 		font-size: 16px;
 	}
-	
+
 	.desc h1 {
 		font-size: 35px;
 	}
-	
+
 	.desc h4 {
 		font-size: 21px;
 	}
@@ -123,7 +123,7 @@ body {
 	border-top: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
 }
-.tip-body a{ 
+.tip-body a{
 	color: #2F74EF;
 	text-decoration: none;
 }
@@ -136,8 +136,8 @@ body {
 
 }
 .fadeOutUp{
-	-webkit-animation: fadeOutUp 2s 2s ease-out both;
-	-moz-animation: fadeOutUp 2s 2s ease-out both;
+	-webkit-animation: fadeOutUp 1.5s 0.5s ease-out both;
+	-moz-animation: fadeOutUp 1.5s 0.5s ease-out both;
 }
 @-webikt-keyframes fadeOutUp{
 	0%{
@@ -170,8 +170,8 @@ body {
 	}
 }
 .fadeInUp{
-	-webkit-animation:fadeInUp 1.5s 2.5s ease-in both;
-	-moz-animation:fadeInUp 1.5s 2.5s ease-in both;
+	-webkit-animation:fadeInUp 1s 1s ease-in both;
+	-moz-animation:fadeInUp 1s 1s ease-in both;
 }
 @-webikt-keyframes fadeInUp{
 	0%{

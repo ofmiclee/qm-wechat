@@ -20,8 +20,16 @@ function($scope, $http, KeyNames, $mdDialog){
         };
     };
     $scope.fade = false;
+    $scope.getOauth = function() {
+        $http.get(KeyNames.domain + '/oauth/req')
+        .then(function(authLink){
+            $scope.authLink = authLink.data.url;
+            // window.open('http://wechat.qianmi.com/oauth/req');
+        });
+    };
     $scope.show = function() {
         $scope.fade = true;
+        $scope.getOauth();
     };
     $scope.showAuthDialog = function(ev) {
         $mdDialog.show({
