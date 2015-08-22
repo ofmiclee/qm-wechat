@@ -26,7 +26,7 @@ function($httpProvider, $stateProvider, $urlRouterProvider, KeyNames) {
     }
 })
 .state('main.baseinfo', {
-  url: "/baseinfo/:id",
+  url: "/baseinfo/:appid",
   views: {
       'pane': {
           controller: 'BaseInfoCtrl',

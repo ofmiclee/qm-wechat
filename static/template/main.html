@@ -2,11 +2,11 @@
 <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
   <md-toolbar class="md-theme-indigo">
     <h1 class="md-toolbar-tools">
-        <img src="http://open.weixin.qq.com/qr/code/?username=allbuywine" >
+        <img ng-src={{"http://open.weixin.qq.com/qr/code/?username=" +  baseInfo.authorizer_info.alias }}>
     </h1>
   </md-toolbar>
   <header class="nav-header">
-      QM-Wechat
+      {{baseInfo.authorizer_info.nick_name || '公众号名'}}
   </header>
   <md-content layout-padding>
     <ul>

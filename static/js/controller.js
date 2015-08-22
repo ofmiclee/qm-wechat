@@ -47,8 +47,9 @@ function($scope, $http, KeyNames, $mdDialog){
     };
 }])
 // 主面板
-.controller('MainCtrl', ['$scope', '$http', 'KeyNames',
-function($scope, $http, KeyNames){
+.controller('MainCtrl', ['$scope', '$rootScope'  ,'$http', 'KeyNames', '$state',
+'$stateParams',
+function($scope, $rootScope, $http, KeyNames, $state, $stateParams){
     $scope.authGroup = [
         {name:'消息与菜单权限集', key: 1},
         {name:'帐号管理权限集', key: 2},
@@ -63,10 +64,18 @@ function($scope, $http, KeyNames){
         {name:'微信连WIFI权限集', key: 11},
 
     ];
+    var appid = $stateParams.appid;
+    var getBaseInfo = function() {
+        $http.get(KeyNames.domain + '/srv/account/info/' + appid)
+        .then(function(baseInfo){
+            $rootScope.baseInfo = baseInfo;
+        });
+    };
 }])
 // 基础信息
-.controller('BaseInfoCtrl', ['$scope', '$http', 'KeyNames',
-function($scope, $http, KeyNames){
+.controller('BaseInfoCtrl', ['$scope', '$http', 'KeyNames', '$state',
+'$stateParams',
+function($scope, $http, KeyNames, $state, $stateParams){
     // $http.get('www.baidu.com');
-    console.log('BaseInfoCtrl');
+
 }]);

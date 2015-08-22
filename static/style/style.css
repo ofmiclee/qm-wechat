@@ -61,6 +61,12 @@ body {
 	margin-left:400px;
 	width: 90px;
 }
+.blur{
+	 -webkit-filter: blur(2px);
+       -moz-filter: blur(2px);
+        -ms-filter: blur(2px);
+            filter: blur(2px);
+}
 .desc h1 {
 	padding-top: 130px;
 	font-size: 54px;
@@ -108,7 +114,7 @@ body {
 }
 .tip-header{
 	padding: 10px 10px 10px 20px;
-	background: #f4f7f9;
+	background: #F9F9F9;
 }
 .tip-header .close{
 	float: right;
@@ -120,8 +126,8 @@ body {
 .tip-body{
 	padding: 15px 20px;
 	background: #fff;
-	border-top: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #EFEFEF;
+	border-bottom: 1px solid #EFEFEF;
 }
 .tip-body a{
 	color: #2F74EF;
@@ -129,15 +135,52 @@ body {
 }
 .tip-footer{
 	padding: 10px;
-    background-color: #f4f7f9;
+    background-color: #F9F9F9;
     text-align: center;
 }
 .tip-footer button{
-
+	margin-right: 5px;
+	display: inline-block;
+	padding: 5px 10px;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	background: transparent;
+    font-size: 14px;
+}
+.tip-footer .button-succ{
+	background: #2F74EF;
+	color: #fff;
+}
+/*reset*/
+.md-toolbar-tools{
+	height: 150px !important;
+    max-height: 150px !important;
+}
+.md-toolbar-tools img{
+	margin: 0 auto;
+	width: 50%;
+}
+.nav-header,.md-default-theme{
+	background-color: rgb(63,81,181);
+	color: #fff;
+}
+.nav-header{
+	padding: 10px 10px 10px 40px;
+    font-size: 22px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.md-default-theme ul{
+	padding-left: 0;
+}
+.md-default-theme button{
+	margin: 0;
+	padding: 6px 6px 6px 30px;
+	width: 100%;
+	text-align: left;
 }
 .fadeOutUp{
-	-webkit-animation: fadeOutUp 1.5s 0.5s ease-out both;
-	-moz-animation: fadeOutUp 1.5s 0.5s ease-out both;
+	-webkit-animation: fadeOutUp 1.5s .5s ease-out both;
+	-moz-animation: fadeOutUp 1.5s .5s ease-out both;
 }
 @-webikt-keyframes fadeOutUp{
 	0%{
@@ -170,8 +213,8 @@ body {
 	}
 }
 .fadeInUp{
-	-webkit-animation:fadeInUp 1s 0.5s ease-in both;
-	-moz-animation:fadeInUp 1s 0.5s ease-in both;
+	-webkit-animation:fadeInUp 1s .5s ease-in both;
+	-moz-animation:fadeInUp 1s .5s ease-in both;
 }
 @-webikt-keyframes fadeInUp{
 	0%{
