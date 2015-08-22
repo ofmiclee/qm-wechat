@@ -64,7 +64,7 @@ function($scope, $rootScope, $http, KeyNames, $state, $stateParams){
         {name:'微信连WIFI权限集', key: 11},
 
     ];
-    var appid = $stateParams.appid;
+    var appid = $state.params.appid;
     var getBaseInfo = function() {
         $http.get(KeyNames.domain + '/srv/account/info/' + appid)
         .then(function(baseInfo){
