@@ -1,10 +1,74 @@
-<!-- <md-content>
-    <md-subheader class="md-no-sticky">拥有的权限集合</md-subheader>
-    <md-list-item class="md-2-line">
-    <img ng-src="" class="md-avatar" />
-    <div class="md-list-item-text">
-      <h3>cccccc</h3>
-      <p>Secondary text</p>
-    </div>
-    </md-list-item>
- <md-content> -->
+<p>
+	<h2 style="font-size:1.75em;color:#333333;font-family:'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;">
+		消息与菜单权限集
+	</h2>
+	<p style="color:#333333;font-family:'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;font-size:16px;">
+		指公众号第三方平台方在获得该权限集后，可以获得被授权公众号的消息与菜单相关的权限。由于涉及到接收并回复粉丝消息，为了防止多方对话交叠而导致用户收到多条消息，故一个公众号至多只能授权给一个公众号第三方平台，即授权互斥。具体包括：
+	</p>
+	<p style="color:#333333;font-family:'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;font-size:16px;">
+		1) 接收和回复被动响应消息能力<br />
+2) 客服消息接口<br />
+3) 获取语音识别开关状态<br />
+4) 设置语音识别开关<br />
+5) 上传下载多媒体文件接口<br />
+6) 自定义菜单的创建、查询和删除<br />
+7) 自定义菜单点击事件接收<br />
+8) 订阅/取消订阅事件推送
+	</p>
+	<h2 style="font-size:1.75em;color:#333333;font-family:'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;">
+		<a id="user-content-用户管理权限集" class="anchor" href="https://github.com/OfMicLee/qm-wechat#用户管理权限集"></a>用户管理权限集
+	</h2>
+	<p style="color:#333333;font-family:'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;font-size:16px;">
+		指公众号第三方平台方在获得该权限集后，可以获得被授权公众号的用户管理权限。由于可供多方获取，故授权不互斥。具体包括：
+	</p>
+	<p style="color:#333333;font-family:'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;font-size:16px;">
+		1) 获取用户基本信息接口<br />
+2) 获取用户列表接口<br />
+3) 用户分组管理接口<br />
+4) 用户备注名设置接口<br />
+5) 设置用户地理位置的开关及上报方式<br />
+6) 获取用户地理位置上报的开关状态及上报方式
+	</p>
+	<h2 style="font-size:1.75em;color:#333333;font-family:'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;">
+		<a id="user-content-帐号管理权限集" class="anchor" href="https://github.com/OfMicLee/qm-wechat#帐号管理权限集"></a>帐号管理权限集
+	</h2>
+	<p style="color:#333333;font-family:'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;font-size:16px;">
+		该权限集主要进行公众帐号的帐号管理，包括获取和设置公众帐号信息，由于可供多方获取和设置，故授权不互斥。具体包括：
+	</p>
+	<h2 style="font-size:1.75em;color:#333333;font-family:'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;">
+		<a id="user-content-网页开发权限集" class="anchor" href="https://github.com/OfMicLee/qm-wechat#网页开发权限集"></a>网页开发权限集
+	</h2>
+	<p style="color:#333333;font-family:'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;font-size:16px;">
+		1) 生成带参数二维码接口<br />
+2) 扫描带参数二维码的事件接收<br />
+3) 获取公众帐号基础信息(头像昵称/帐号类型等,此接口暂为服务方独有)<br />
+4）上传下载多媒体文件接口
+	</p>
+	<h2 style="font-size:1.75em;color:#333333;font-family:'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;">
+		<a id="user-content-网页开发权限集-1" class="anchor" href="https://github.com/OfMicLee/qm-wechat#网页开发权限集-1"></a>网页开发权限集
+	</h2>
+	<p style="color:#333333;font-family:'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;font-size:16px;">
+		该权限集主要指公众号第三方平台可以代替公众帐号发起微信网页授权，并在授权后可以合法获得相关的授权信息，还包括可以代替公众号使用JS SDK。由于可供多方使用，故授权不互斥。具体包括：<br />
+1) 发起微信内网页授权的权限<br />
+2) 授权后获取授权用户的基本信息（权限根据应用授权作用域scope的不同而不同：scope为snsapi_base时不弹出授权页面但只能获取用户openid）；scope为snsapi_userinfo时弹出授权页面但可通过openid拿到用户昵称、性别、所在地）<br />
+3）代替公众号使用JS SDK
+	</p>
+	<h2 style="font-size:1.75em;color:#333333;font-family:'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;">
+		<a id="user-content-微信小店权限集" class="anchor" href="https://github.com/OfMicLee/qm-wechat#微信小店权限集"></a>微信小店权限集
+	</h2>
+	<p style="color:#333333;font-family:'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;font-size:16px;">
+		该权限集主要是指管理微信公众平台小店的功能，由于可供多方使用，故授权不互斥。具体包括：<br />
+1) 微信小店所有接口权限<br />
+2) 微信小店所有事件推送（事件将推送到创建服务时填写的公众号消息与事件接收URL）
+	</p>
+	<h2 style="font-size:1.75em;color:#333333;font-family:'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;">
+		<a id="user-content-多客服权限集" class="anchor" href="https://github.com/OfMicLee/qm-wechat#多客服权限集"></a>多客服权限集
+	</h2>
+	<p style="color:#333333;font-family:'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;font-size:16px;">
+		该权限集主要指能否设置和获取公众账号的多客服功能开关的状态。一旦打开开关之后，客服消息将不再推送给第三方平台方，而是推送给微信多客服功能后台。此时，公众号运营者需要在mp.weixin.qq.com的多客服模块中下载多客服PC客户端来使用，与发客服消息的粉丝进行CRM沟通互动。该权限集可以授权给多个服务方，即授权不互斥，具体包括：<br />
+1）微信多客服所有接口权限
+	</p>
+</p>
+<p>
+	<br />
+</p>
