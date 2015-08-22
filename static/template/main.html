@@ -1,0 +1,20 @@
+<section layout="row" flex>
+<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+  <md-toolbar class="md-theme-indigo">
+    <h1 class="md-toolbar-tools">Sidenav Left</h1>
+  </md-toolbar>
+  <header class="nav-header">
+      QM-Wechat
+  </header>
+  <md-content layout-padding>
+    <ul>
+        <li ng-repeat="auth in authGroup">
+            <md-button>{{auth.name}}</md-button>
+        </li>
+    </ul>
+  </md-content>
+</md-sidenav>
+<div layout="column" ui-view="pane">
+    ssssssssss
+</div>
+</section>
