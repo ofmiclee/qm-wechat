@@ -68,7 +68,7 @@ function($scope, $rootScope, $http, KeyNames, $state, $stateParams){
     var getBaseInfo = function() {
         $http.get(KeyNames.domain + '/srv/account/info/' + appid)
         .then(function(baseInfo){
-            $rootScope.baseInfo = baseInfo;
+            $rootScope.baseInfo = baseInfo.data;
         });
     };
     getBaseInfo();
