@@ -91,6 +91,24 @@ body {
     color: #FDFDFD;
     font-size: 35px;
 }
+.btn-arrow{
+	position: absolute;
+	left: 50%;
+	margin-left: -15px;
+	margin-top: 20px;
+	display: block;
+	content: "";
+	width: 20px;
+	height: 20px;
+	border-width: 4px 4px 0 0;
+	border-style: solid;
+	border-color: #fff;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-webkit-animation:bounce 2s  ease infinite;
+	-moz-animation:bounce 2s  ease infinite;
+	animation:bounce 2s  ease infinite;
+}
 @media (max-width: 767px) {
 	.desc {
 		padding-top: 10%;
@@ -275,4 +293,36 @@ body {
 		-webkit-transform-origin:center center;
 		-webkit-transform:rotate(360deg);
 	}
+}
+/*.bounce{
+	-webkit-animation:bounce 1s  ease infinite;
+	-moz-animation:bounce 1s  ease infinite;
+	animation:bounce 1s  ease infinite;
+}*/
+@-webkit-keyframes bounce{
+	0%{
+		opacity: 0.2;
+	}
+	100%{
+		opacity: 1;
+		margin-top: 5px;
+	}
+}
+@-moz-keyframes bounce{
+	0%{
+		opacity: 0.2;
+	}
+	100%{
+		opacity: 1;
+		margin-top: 5px;
+		}
+}
+@keyframes bounce{
+	0%{
+		opacity: 0.2;
+	}
+	100%{
+		opacity: 1;
+		margin-top: 5px;
+		}
 }
