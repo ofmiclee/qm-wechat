@@ -66,10 +66,15 @@ function($scope, $rootScope, $http, KeyNames, $state, $stateParams){
     ];
     var appid = $state.params.appid;
     var getBaseInfo = function() {
-        $http.get(KeyNames.domain + '/srv/account/info/' + appid)
-        .then(function(baseInfo){
-            $rootScope.baseInfo = baseInfo.data;
-        });
+        if($rootScope.baseInfo) {
+
+        } else {
+            $http.get(KeyNames.domain + '/srv/account/info/' + appid)
+            .then(function(baseInfo){
+                $rootScope.baseInfo = baseInfo.data;
+            });
+        }
+
     };
     getBaseInfo();
 }])
@@ -78,6 +83,13 @@ function($scope, $rootScope, $http, KeyNames, $state, $stateParams){
 '$stateParams',
 function($scope, $rootScope, $http, KeyNames, $state, $stateParams){
     //
-    var authGroup = $rootScope.baseInfo.authorization_info.func_info;
+    if($rootScope.baseInfo) {
+
+    } else {
+        $http.get(KeyNames.domain + '/srv/account/info/' + appid)
+        .then(function(baseInfo){
+            $rootScope.baseInfo = baseInfo.data;
+        });
+    }
 
 }]);
